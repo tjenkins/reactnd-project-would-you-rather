@@ -15,15 +15,16 @@ class QuestionDetail extends Component {
     } = this.props
 
     return (
-      error === true ? <Redirect to='/404' />
+      error === true
+      ? <Redirect to='/404' />
       : (
         <div className="question-detail-container">
           <div className="question-item">
-          <QuestionAuthor qid={id}/>
-          {hasAnswered === true
-            ? <QuestionDetailAnswered id={id} />
-            : <QuestionDetailUnanswered id={id} />
-          }
+            <QuestionAuthor qid={id}/>
+            {hasAnswered === true
+              ? <QuestionDetailAnswered id={id} />
+              : <QuestionDetailUnanswered id={id} />
+            }
           </div>
         </div>
       )
