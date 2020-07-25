@@ -1,0 +1,286 @@
+* {
+  box-sizing: border-box;
+}
+
+p {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/*** SHARED ***/
+
+.avatar {
+  height: 50px;
+  border-radius: 25px;
+  margin: 10px;
+}
+
+/*** LOGIN ***/
+
+.login-container {
+  width: 350px;
+  margin: auto;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 100px;
+}
+
+.login-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.login-item {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0 20px;
+  border-top: 1px solid #ccc;
+  cursor: pointer;
+}
+
+/*** NAV ***/
+
+.nav-wrapper {
+  width: 100%;
+  border-bottom: 2px solid #1071E5;
+  color: #666;
+}
+
+.nav-container {
+  margin: auto;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item {
+  padding: 20px;
+  text-decoration: none;
+  color: #666;
+  cursor: pointer;
+}
+
+.nav-group-right {
+  display: flex;
+  align-items: center;
+}
+
+.nav-item-selected {
+  color: #1071E5;
+}
+
+.nav-btn-logout {
+  margin-left: 50px;
+}
+
+/*** QUESTION LIST ***/
+
+.question-list-wrapper {
+  margin: 50px auto;
+  width: 500px;
+}
+
+.btn-question-list-header {
+  width: 50%;
+  border: 1px solid #1071E5;
+  background-color: #fff;
+  color: #1071E5;
+  border-collapse: collapse;
+  cursor: pointer;
+  padding: 20px;
+  font-size: 16px;
+}
+
+.btn-question-list-selected {
+  background-color: #1071E5;
+  color: #fff;
+}
+
+.btn-question-list-header:first-child {
+  border-right: none;
+}
+
+.btn-question-list-header:focus {
+  outline: none;
+}
+
+.question-list {
+  padding: 10px 0;
+}
+
+.question-item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px 0;
+  text-decoration: none;
+  display: block;
+  color: inherit;
+  text-align: center;
+  display: flex;
+}
+
+.question-item-option-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr 3fr;
+  gap: 10px;
+  align-items: center;
+}
+
+.question-item-content {
+  flex: 1;
+  padding-left: 10px;
+}
+
+.question-item-author-container {
+  font-size: 0.8em;
+  width: 120px;
+  border-right: 1px solid #ccc;
+  padding: 10px 20px 10px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.question-or {
+  margin: 0 10px;
+}
+
+/*** QUESTION DETAIL ***/
+
+.question-detail-container {
+  margin: 50px auto;
+  width: 500px;
+}
+
+.question-item-option {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.question-chosen-callout {
+  color: #1071E5;
+  margin-bottom: -10px;
+  font-size: 0.8em;
+}
+
+.btn-submit-question {
+  margin-top: 20px;
+  font-size: 1.1em;
+  width: 100%;
+  padding: 10px;
+  background-color: #1071E5;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-submit-question:disabled {
+  opacity: 60%;
+  cursor: auto;
+}
+
+button:focus {
+  outline: none
+}
+
+.question-item-selected {
+  border: 2px solid #1071E5;
+}
+
+/*** NEW QUESTION ***/
+
+.new-question-container {
+  margin: 50px auto;
+  width: 500px;
+  text-align: center;
+  border: 1px solid #ccc;
+  padding: 20px;
+}
+
+.new-question-input {
+  resize: none;
+  font-family: inherit;
+  width: 100%;
+  margin: 10px 0;
+}
+
+/*** LEADERBOARD ***/
+
+.leaderboard-list {
+  width: 500px;
+  margin: auto;
+}
+
+.leaderboard-item {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 20px 0;
+}
+
+.leaderboard-item p {
+  margin: 10px 0;
+}
+
+.leaderboard-avatar-conatiner {
+  width: 100px;
+}
+
+.leaderboard-avatar {
+  height: 100px;
+  border-radius: 50%;
+  display: block;
+  margin: 10px;
+}
+
+.leaderboard-user-info {
+  flex: 1;
+  padding: 10px 10px 0 30px;
+}
+
+.leaderboard-name {
+  margin: 0;
+}
+
+.leaderboard-score-container {
+  text-align: center;
+  border: 1px solid #1071E5;
+  width: 90px;
+}
+
+.leaderboard-score-header {
+  background-color: #1071E5;
+  padding: 10px;
+  color: #fff;
+  font-size: 1.2em;
+}
+
+.leaderboard-score {
+  padding: 10px;
+  font-size: 2em;
+}
