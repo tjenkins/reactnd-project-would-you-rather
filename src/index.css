@@ -172,12 +172,17 @@ code {
 
 .question-item-option {
   display: flex;
+  height: 100%;
   flex-direction: column;
   justify-content: center;
   border: 2px solid transparent;
   border-radius: 5px;
   cursor: pointer;
   padding: 10px;
+}
+
+.question-item-option-disabled {
+  cursor: auto;
 }
 
 .question-chosen-callout {
