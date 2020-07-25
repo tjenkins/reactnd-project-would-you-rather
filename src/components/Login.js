@@ -8,6 +8,19 @@ class Login extends Component {
     this.props.dispatch(setAuthedUser(id))
   }
 
+  getUserList = (users) => (
+    users.map((user) => (
+      <li
+        className='login-item'
+        key={user.id}
+        onClick={() => this.handleClick(user.id)}
+      >
+        <img className='avatar' src={user.avatarURL} alt="avatar"/>
+        {user.name}
+      </li>
+    ))
+  )
+
   render() {
     const { users } = this.props
 
@@ -15,16 +28,7 @@ class Login extends Component {
       <div className='login-container'>
         <h2>Select an account</h2>
         <ul className='login-list'>
-          {users.map((user) => (
-            <li
-              className='login-item'
-              key={user.id}
-              onClick={() => this.handleClick(user.id)}
-            >
-              <img className='avatar' src={user.avatarURL} alt="avatar"/>
-              {user.name}
-            </li>
-          ))}
+          {this.getUserList(users)}
         </ul>
       </div>
     )
