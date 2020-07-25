@@ -23,14 +23,22 @@ class QuestionDetailAnswered extends Component {
               <div className="question-chosen-callout">{answer === 'optionTwo' ? 'You picked' : '' }</div>
               <div
                 id="option-one"
-                className={`question-item-option ${answer === 'optionOne' ? 'question-item-selected' : ''}`}
+                className={
+                  `question-item-option
+                  ${answer === 'optionOne' ? 'question-item-selected' : ''}
+                  question-item-option-disabled`
+                }
                 >
                 {optionOneText}
               </div>
               <div className="question-or">OR</div>
               <div
                 id="option-two"
-                className={`question-item-option ${answer === 'optionTwo' ? 'question-item-selected' : ''}`}
+                className={
+                  `question-item-option
+                  ${answer === 'optionTwo' ? 'question-item-selected' : ''}
+                  question-item-option-disabled`
+                }
                 >
                 {optionTwoText}
               </div>
